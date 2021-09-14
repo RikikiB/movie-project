@@ -8,4 +8,34 @@
 }
 
 .topnav {
+  background-color: rgb(81, 81, 81, 1);
+  display: flex;
+  justify-content: space-around;
+  color: rgb(81, 81, 81, 1);
+}
+.btn1 {
+  background-color: rgb(196, 196, 196, 1);
+}
+.btn2 {
+  background-color: rgb(196, 196, 196, 1);
+}
+.btn3 {
+  background-color: rgb(196, 196, 196, 1);
+}
+.btn4 {
+  background-color: rgb(196, 196, 196, 1);
+}
+.search {
+  background-color: rgb(196, 196, 196, 1);
+}
+.text {
+  background-color: rgb(196, 196, 196, 1);
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.btn5 {
+  background-color: rgba(188, 56, 56, 1);
+  text-color: ;
 }
