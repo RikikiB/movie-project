@@ -16,27 +16,31 @@
 }
 .btn1 {
   background-color: rgb(196, 196, 196, 1);
+  border: 1px solid black;
 }
 .btn2 {
   background-color: rgb(196, 196, 196, 1);
+  border: 1px solid black;
 }
 .btn3 {
   background-color: rgb(196, 196, 196, 1);
+  border: 1px solid black;
 }
 .btn4 {
   background-color: rgb(196, 196, 196, 1);
+  border: 1px solid black;
 }
-.search {
+input {
   background-color: rgb(196, 196, 196, 1);
-}
-.text {
-  background-color: rgb(196, 196, 196, 1);
+  color: black;
+  border: 1px solid black;
 }
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 10%;
+  color: white;
 }
 .btn5 {
   background-color: rgba(188, 56, 56, 1);
@@ -46,4 +50,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-left: 40%;
+}
+body {
+  background-color: rgba(81, 81, 81, 1);
 }
