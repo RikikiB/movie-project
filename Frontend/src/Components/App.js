@@ -2,7 +2,7 @@ import "./App.css";
 import Footer from "./Footer";
 import Header from "./Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./views/Home";
+import Home from "./Home";
 import MovieDetailPage from "./views/MovieDetailPage";
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
-            {/* <Home /> */}
+            <Home />
             <div>home</div>
           </Route>
           <Route path="/detail">
