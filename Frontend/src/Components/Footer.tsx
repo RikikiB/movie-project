@@ -1,9 +1,9 @@
 import React from 'react'
-
+import './Footer.css'
 import { Link } from 'react-router-dom'
 function Footer() {
   return (
-    <div className='footer'>
+    <div className='Footer'>
       {''}
       <Link to='/'>Home</Link>
       <Link to='/quiz'></Link>
