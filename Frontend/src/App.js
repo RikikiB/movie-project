@@ -1,7 +1,6 @@
 import './App.css'
-import useState from 'react'
 
-const [body, setBody] = useState()
+
 
 function App() {
   return (
@@ -11,6 +10,7 @@ function App() {
       <button className='btn3'>RATING</button>
       <button className='btn4'>ACTOR</button>
       <input type='text' placeholder='Search..' name='search'></input>
+      </div>
     <div className="container">
     <h2>Don't know what to watch?</h2>
     <button className="btn5">
