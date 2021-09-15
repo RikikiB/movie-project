@@ -1,4 +1,6 @@
-const Footer=(){
+import React from 'react'
+
+function Footer=(){
     return(
         <div className="footer">
         {''}
@@ -9,3 +11,4 @@ const Footer=(){
         </div>
     )
 }
+export default Footer
