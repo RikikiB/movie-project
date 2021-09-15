@@ -1,33 +1,30 @@
 .Header {
   background-color: rgb(81, 81, 81, 1);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-direction: row;
   color: rgb(81, 81, 81, 1);
   border-radius: 5px;
 
   .btn {
     background-color: rgb(196, 196, 196, 1);
     border: 1px solid black;
+    height: 20px;
   }
   input {
     background-color: rgb(196, 196, 196, 1);
     color: black;
     border: 1px solid black;
+    height: 20px;
   }
   .btn5 {
     background-color: rgba(188, 56, 56, 1);
     color: white;
     padding: 5%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 40%;
+    margin-left: 50%;
   }
 }
-/* .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.container {
   margin: 10%;
   color: white;
-} */
+}
