@@ -2,7 +2,7 @@ import './App.css'
 import Footer from './Footer'
 import Header from './Header'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Home from './views/Home'
+import Home from './Home'
 import Quizpage from './Quizpage'
 
 function App() {
