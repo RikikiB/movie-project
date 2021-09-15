@@ -1,22 +1,28 @@
-import './App.css'
-import Footer from './Footer'
-import Header from './Header'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Home from './views/Home'
+import "./App.css";
+import Footer from "./Footer";
+import Header from "./Header";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./views/Home";
+import MovieDetailPage from "./views/MovieDetailPage";
 function App() {
   return (
-    <Router>
-      <div className='App'>
-        <Footer />
+    <div className="App">
+      <Router>
+        <Header />
         <Switch>
-          <Route path='/'>
-            <Home />
+          <Route exact path="/">
+            {/* <Home /> */}
+            <div>home</div>
+          </Route>
+          <Route path="/detail">
+            <MovieDetailPage />
           </Route>
         </Switch>
-        <Header />
-      </div>
-    </Router>
-  )
+
+        <Footer />
+      </Router>
+    </div>
+  );
 }
 
-export default App
+export default App;
