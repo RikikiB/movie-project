@@ -10,12 +10,9 @@ function Header() {
       <button className='btn'>RATING</button>
       <button className='btn'>ACTOR</button>
       <input type='text' placeholder='Search..' name='search'></input>
-      <div className='container'>
-        <h2>Don't know what to watch?</h2>
-        <button className='btn5'>
-          <h1>START QUIZ!</h1>
-        </button>
-      </div>
+      <Link to='/'>Home</Link>
+      <Link to='/quiz'> Quiz </Link>
+      <Link to='/about'>About</Link>
     </div>
   )
 }

@@ -1,7 +1,16 @@
+import { Link } from 'react-router-dom'
+
 function Home() {
   return (
     <div>
-      <h1>home</h1>
+      <div className='container'>
+        <h2>Don't know what to watch?</h2>
+        <Link to='/quizpage'>
+          <button className='btn5'>
+            <h1>START QUIZ!</h1>
+          </button>
+        </Link>
+      </div>
     </div>
   )
 }
