@@ -1,6 +1,14 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-left: 5%;
+  color: white;
+}
 .btn5 {
   background-color: rgba(188, 56, 56, 1);
   color: white;
-  padding: 5%;
-  margin-left: 50%;
+  padding: 3%;
+  display: flex;
+  justify-content: center;
+  margin-left: 40%;
 }
