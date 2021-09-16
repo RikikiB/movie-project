@@ -21,21 +21,35 @@
   width: 70px;
   border-radius: 3px;
   filter: drop-shadow(10px 10px 10px black);
+  margin-top: 5%;
+  font-family: roboto, arial;
+  text-decoration: bold;
+  font-size: 15px;
 }
 input {
   background-color: rgb(196, 196, 196, 1);
   color: black;
   border: 1px solid rgb(104, 104, 104);
   height: 20px;
+  margin-top: 5%;
+  font-family: roboto, arial;
 }
-Link {
+/* unvisited link */
+a:link {
   background-color: rgba(196, 196, 196, 0.787);
   border: none;
-  color: rgb(38, 38, 38);
-  display: flex;
-  align-items: center;
+  color: rgb(0, 0, 0);
   height: 20px;
   width: 70px;
   border-radius: 3px;
   filter: drop-shadow(10px 10px 10px black);
+  margin-top: 5%;
+  font-family: roboto, arial;
+  font-size: 16px;
+  text-decoration: none;
+}
+/* visited link */
+a:visited {
+  color: black;
+  font-weight: normal;
 }
