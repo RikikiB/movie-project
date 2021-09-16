@@ -1,3 +1,7 @@
+.container {
+  height: 90%;
+  width: 100%;
+}
 .btn5 {
   background-color: rgba(188, 56, 56, 1);
   color: white;
