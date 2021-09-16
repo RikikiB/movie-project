@@ -1,13 +1,8 @@
 .container {
-<<<<<<< HEAD
-  height: 90%;
-  width: 100%;
-=======
   display: flex;
   justify-content: center;
   margin-left: 5%;
   color: white;
->>>>>>> 8f1dd34d7fa7c2f87720365d1999ff4a38de1d0a
 }
 .btn5 {
   background-color: rgba(188, 56, 56, 1);
