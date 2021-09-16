@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Header.scss'
 import './Home.tsx'
-import { Library } from '@fortawesome/fontawesome-svg-core'
-import {} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 
 function Header() {
   return (
@@ -15,11 +15,10 @@ function Header() {
         <button className='btn'>YEAR</button>
         <button className='btn'>RATING</button>
         <button className='btn'>ACTOR</button>
-        <input
-          type='text'
-          placeholder='Search..'
-          name='search'
-        ></input>
+        <input type='text' placeholder='Search..' name='search'>
+          {' '}
+          <FontAwesomeIcon icon={faSearchPlus} />
+        </input>
       </div>
     </div>
   )
