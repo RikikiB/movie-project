@@ -1,11 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { Descriptions } from "antd";
+import { Descriptions, Badge } from "antd";
 
 function MovieDetailPage(props) {
   const omdb_api_key = "65b23a68";
   const movieId = "tt3896198";
-  const URL_api = `http://www.omdbapi.com/?i=${movieId}&apikey=${omdb_api_key}`;
+  // const URL_api = `http://www.omdbapi.com/?i=${movieId}&apikey=${omdb_api_key}`;
+  const URL_api =
+    "https://api.themoviedb.org/3/movie/550?api_key=795cf19c05b9ff607f4b7206a0a4abd3";
 
   const [movie, setMovie] = useState([]);
   const [show, setShow] = useState(false);
@@ -29,22 +31,22 @@ function MovieDetailPage(props) {
     <div>
       <Descriptions title="Movie Info" bordered>
         <Descriptions.Item label="Title : ">{movie.Title}</Descriptions.Item>
-        <Descriptions.Item label="Runtime : ">
-          {movie.Runtime}
-        </Descriptions.Item>
-        <Descriptions.Item label="Writer : ">{movie.Writer}</Descriptions.Item>
         <Descriptions.Item label="Director : ">
           {movie.Director}
         </Descriptions.Item>
+        <Descriptions.Item label="imdbRating : ">
+          {movie.imdbRating}
+        </Descriptions.Item>
+        <Descriptions.Item label="Genre : ">{movie.Genre}</Descriptions.Item>
         <Descriptions.Item label="Country : ">
           {movie.Country}
         </Descriptions.Item>
         <Descriptions.Item label="imdbVotes : ">
           {movie.imdbVotes}
         </Descriptions.Item>
-        <Descriptions.Item label="Genre : ">{movie.Genre}</Descriptions.Item>
-        <Descriptions.Item label="imdbRating : ">
-          {movie.imdbRating}
+        <Descriptions.Item label="Writer : ">{movie.Writer}</Descriptions.Item>
+        <Descriptions.Item label="Runtime : ">
+          {movie.Runtime}
         </Descriptions.Item>
         <Descriptions.Item label="Released : ">
           {movie.Released}
