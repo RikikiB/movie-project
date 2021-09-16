@@ -28,7 +28,6 @@ function App() {
             <MovieDetailPage />
           </Route>
         </Switch>
-
         <Footer />
       </Router>
     </div>
