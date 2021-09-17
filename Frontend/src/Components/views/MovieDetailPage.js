@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { Descriptions, Badge } from "antd";
-import  './MovieDetailPage.scss'
+import { Descriptions, DescriptionItem } from "antd";
+import "./MovieDetailPage.scss";
 
 function MovieDetailPage(props) {
   // const omdb_api_key = "65b23a68";
@@ -11,7 +11,7 @@ function MovieDetailPage(props) {
 
   const URL_api = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${omdb_api_key}`;
 
-  const [movie, setMovie] = useState({genres:[]});
+  const [movie, setMovie] = useState({ genres: [] });
   const [show, setShow] = useState(false);
   const [crews, setCrews] = useState([]);
 
@@ -20,19 +20,24 @@ function MovieDetailPage(props) {
       .then((response) => response.json())
       .then((response) => {
         setMovie(response);
-        });
+      });
 
-    fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${omdb_api_key}`)
+    fetch(
+      `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${omdb_api_key}`
+    )
       .then((res) => res.json())
-      .then((res) => setCrews(res.cast))
+      .then((res) => setCrews(res.cast));
+  }, [URL_api]);
 
-  }, []);
-
-console.log(crews)
+  console.log(crews);
 
   return (
-    <div>
-      <Descriptions title="Movie Info" bordered>
+    <div className="MovieDetailPage">
+      <div className="grid">
+        <div>Title: {movie.original_title}</div>
+        <div>Release Date: {movie.release_date}</div>
+      </div>
+      {/* <Descriptions title="Movie Info" bordered>
         <Descriptions.Item label="Title : ">
           {movie.original_title}
         </Descriptions.Item>
@@ -58,11 +63,13 @@ console.log(crews)
         <Descriptions.Item label="status: ">{movie.status}</Descriptions.Item>
 
         <Descriptions.Item label="genres : ">
-          {movie.genres.map(function (typ) {
+          {movie.genres
+            .map(function (typ) {
               return typ.name;
-            }).join(" ")}
+            })
+            .join(" ")}
         </Descriptions.Item>
-      </Descriptions>
+      </Descriptions> */}
       <button className="actor-view" onClick={() => setShow(!show)}>
         Actor view
       </button>
@@ -75,7 +82,12 @@ console.log(crews)
          {return image={crew.poster_path}})}
       </div> */}
       {crews.map((item) => {
-        return <img src={`https://www.themoviedb.org/t/p/w276_and_h350_face${item.profile_path}`}></img>
+        return (
+          <img
+            src={`https://www.themoviedb.org/t/p/w276_and_h350_face${item.profile_path}`}
+            alt="actors"
+          />
+        );
       })}
     </div>
   );
