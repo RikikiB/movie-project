@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "./App.css";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -5,6 +6,20 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import MovieDetailPage from "./views/MovieDetailPage";
 import Quizpage from "./Quizpage";
+=======
+import './App.css'
+import Footer from './Footer'
+import Header from './Header'
+import Quizpage from './Quizpage'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom'
+import Home from './Home'
+import MovieDetailPage from './views/MovieDetailPage'
+import { Link } from 'react-router-dom'
+>>>>>>> 61a1f2e2fb109bc5303c7ad17451affd9f3c353d
 function App() {
   return (
     <div className="App">

@@ -7,7 +7,12 @@ function Quizpage() {
         <h1> What Genre are you Intrested in?</h1>
       </div>
       <div className='Answerbox'>
-        <input type='radio' id='html' name='fav_language' value='HTML'></input>
+        <input
+          type='radio'
+          id='html'
+          name='fav_language'
+          value='HTML'
+        ></input>
       </div>
     </div>
   )

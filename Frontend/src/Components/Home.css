@@ -1,6 +1,9 @@
 .container {
+<<<<<<< HEAD
   height: 90%;
   width: 100%;
+=======
+>>>>>>> 61a1f2e2fb109bc5303c7ad17451affd9f3c353d
   display: flex;
   justify-content: center;
   margin-left: 5%;
