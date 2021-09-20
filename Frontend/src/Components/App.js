@@ -20,7 +20,7 @@ function App() {
               </button>
             </div>
           </Route>
-          <Route path="/detail">
+          <Route path="/detail/:movieId">
             <MovieDetailPage />
           </Route>
           <Route path="/quiz">
