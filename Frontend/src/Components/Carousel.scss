@@ -1,9 +1,12 @@
-.Carousel-slide {
+.Carousel {
   background-color: red;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-area: 'A B C D E F G H I J';
   border: 1px solid black;
+}
+
+.Carousel-slide {
 }
 
 .A {

@@ -7,6 +7,10 @@ import {
   Route,
   Link,
 } from 'react-router-dom'
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '../main.css'
+
 import Home from './Home'
 import MovieDetailPage from './views/MovieDetailPage'
 import Quizpage from './Quizpage'

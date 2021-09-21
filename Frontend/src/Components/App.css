@@ -5,8 +5,5 @@
 .App {
   max-width: 1920px;
   margin: 0 auto;
-  font-family: "Crimson Text", serif;
-}
-body {
-  background-color: rgba(81, 81, 81, 1);
+  font-family: 'Crimson Text', serif;
 }

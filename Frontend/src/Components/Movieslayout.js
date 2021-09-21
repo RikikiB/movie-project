@@ -1,27 +1,37 @@
 import './Movieslayout.scss'
-import React from 'react'
 import Carousel from './Carousel'
-import { useEffect } from './views/MovieDetailPage'
 
 function MovieLayout() {
+  // get movie list here or pass it in as a prop
   return (
     <div className='Movielayout'>
       <h1> This is for the layout of all movies</h1>
-      <Carousel />
-      <div className='Movies'>
-        <div grid area='A' />
-        <div grid area='B' />
-        <div grid area='C' />
-        <div grid area='D' />
-        <div grid area='E' />
-        <div grid area='F' />
-        <div grid area='G' />
-        <div grid area='H' />
-        <div grid area='I' />
-        <div grid area='J' />
-      </div>
-
-      <useEffect />
+      <Carousel
+        indicators={false}
+        slides={[
+          {
+            src: 'https://via.placeholder.com/800x400.png',
+            altText: 'First Slide',
+            label: 'first slide label',
+            desc: 'first slide desc',
+            movieId: 'asdfasdf',
+          },
+          {
+            src: 'https://via.placeholder.com/800x400.png',
+            altText: 'second Slide',
+            label: 'second slide label',
+            desc: 'second slide desc',
+            movieId: 'asdfasdsfghf',
+          },
+          {
+            src: 'https://via.placeholder.com/800x400.png',
+            altText: 'third Slide',
+            label: 'third slide label',
+            desc: 'third slide desc',
+            movieId: 'asdfasdfasdf',
+          },
+        ]}
+      />
     </div>
   )
 }
