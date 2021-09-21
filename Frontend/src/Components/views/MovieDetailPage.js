@@ -108,3 +108,4 @@ function MovieDetailPage(props) {
 }
 
 export default MovieDetailPage
+export { useEffect }
