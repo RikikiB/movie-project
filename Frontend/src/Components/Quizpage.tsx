@@ -1,4 +1,5 @@
 import React from "react";
+import Flashmain from "./question/Flashmain";
 
 function Quizpage() {
   return (
@@ -9,6 +10,7 @@ function Quizpage() {
       <div className="Answerbox">
         <input type="radio" id="html" name="fav_language" value="HTML" />
       </div>
+      <Flashmain />
     </div>
   );
 }
