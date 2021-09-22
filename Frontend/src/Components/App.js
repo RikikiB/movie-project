@@ -24,7 +24,7 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <Home />
-            <div>
+            <div className='homecontainer'>
               <Link to='/quizpage'></Link>
               <button className='btn5'>
                 <h1>START QUIZ!</h1>
