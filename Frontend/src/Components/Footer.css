@@ -1,6 +1,12 @@
 .Footer {
-  background-color: rgb(81, 81, 81, 1);
-  border-radius: 5px;
-  margin-bottom: 60px;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(168, 14, 14, 0.767);
   font-family: 'Crimson Text', serif;
+  border-radius: 15px;
+  display: grid;
+  display: Grid;
+  justify-items: center;
+  grid-template-areas: 'quiz home genres year search';
+  color: white;
 }
