@@ -19,10 +19,11 @@ function Carousel({ slides = [], ...rest }: iCarousel) {
             }}
           >
             <img
-              className='d-block w-100'
+              className='d-block w-50'
               src={slide?.src}
               alt={slide?.altText}
             />
+
             <BootstrapCarousel.Caption>
               <h3>{slide?.label}</h3>
               <p>{slide?.desc}</p>
@@ -33,5 +34,4 @@ function Carousel({ slides = [], ...rest }: iCarousel) {
     </BootstrapCarousel>
   )
 }
-
 export default Carousel
