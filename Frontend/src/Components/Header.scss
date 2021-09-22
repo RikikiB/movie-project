@@ -1,55 +1,64 @@
-.Header {
-  height: 100%;
+.Navbar {
+  height: 50px;
   width: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(168, 14, 14, 0.767);
+  font-family: 'Crimson Text', serif;
+  border-radius: 15px;
+  display: grid;
+  display: Grid;
+  justify-items: center;
+  grid-template-areas: 'quiz home genres year search';
 }
 
-.navbar {
-  width: 100%;
-  height: 100px;
-  background-color: rgba(95, 93, 93, 0.475);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.btn {
-  background-color: rgba(196, 196, 196, 0.787);
-  border: none;
-  color: rgb(38, 38, 38);
-  height: 20px;
-  width: 70px;
-  border-radius: 3px;
-  filter: drop-shadow(10px 10px 10px black);
-  margin-top: 5%;
-  font-family: "Crimson Text", serif;
-  text-decoration: bold;
-  font-size: 15px;
-}
-input {
-  background-color: rgb(196, 196, 196, 1);
-  color: black;
-  border: 1px solid rgb(104, 104, 104);
-  height: 20px;
-  margin-top: 5%;
-  font-family: "Crimson Text", serif;
-}
-/* unvisited link */
-a:link {
-  background-color: rgba(196, 196, 196, 0.787);
-  border: none;
-  color: rgb(0, 0, 0);
-  height: 20px;
-  width: 70px;
-  border-radius: 3px;
-  filter: drop-shadow(10px 10px 10px black);
-  margin-top: 5%;
-  font-family: "Crimson Text", serif;
-  font-size: 16px;
+.Navbar a {
+  font-size: 17px;
+  font-family: 'Crimson Text', serif;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 16px 16px;
   text-decoration: none;
 }
-/* visited link */
-a:visited {
+.genres,
+.year {
+  background-color: #4caf4f00;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  display: Grid;
+  justify-self: center;
+}
+.genresbox,
+.yearbox {
+  position: relative;
+  display: Grid;
+  justify-self: center;
+}
+.listholder {
+  background-color: rgb(214, 214, 214);
+  min-width: 30px;
+  box-shadow: 0px 8px 16px 0px rgba(47, 47, 47, 0.2);
+  position: relative;
+  top: 0;
+}
+.listholder a {
   color: black;
-  font-weight: normal;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+}
+.listholder:hover .listholder {
+  display: block;
+}
+
+input {
+  background-color: rgb(214, 214, 214);
+  color: black;
+  border: 1px solid rgba(104, 104, 104, 0);
+  height: 20px;
+  width: 200px;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-family: 'Crimson Text', serif;
 }
