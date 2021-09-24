@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 import './Home.tsx'
@@ -56,8 +56,16 @@ function Navbar() {
         </button>
         {open && (
           <div className='listholder'>
-            {rating.results.map(function (rating) {
-              return <li key={rating.id}>{rating.title} </li>
+            {rating.results.map(function (movie) {
+              return (
+                <Link
+                  key={movie.id}
+                  to={`/detail/${movie.id}`}
+                  onClick={() => setOpen(false)}
+                >
+                  {movie.title}
+                </Link>
+              )
             })}
           </div>
         )}
