@@ -4,9 +4,5 @@
   background-color: rgba(168, 14, 14, 0.767);
   font-family: 'Crimson Text', serif;
   border-radius: 15px;
-  display: grid;
-  display: Grid;
-  justify-items: center;
-  grid-template-areas: 'quiz home genres year search';
   color: white;
 }
