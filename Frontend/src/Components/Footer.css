@@ -1,7 +1,12 @@
 .Footer {
-  background-image: url('https://i.imgur.com/CaTD18H.jpg');
+  height: 50px;
+  width: 100%;
+  background-color: rgba(168, 14, 14, 0.767);
   font-family: 'Crimson Text', serif;
-  background-color: black;
-  position: bottom;
-  bottom: 150%;
+  border-radius: 15px;
+  display: grid;
+  display: Grid;
+  justify-items: center;
+  grid-template-areas: 'quiz home genres year search';
+  color: white;
 }
