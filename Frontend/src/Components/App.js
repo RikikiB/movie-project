@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../main.css'
 import Home from './Home'
 import MovieDetailPage from './views/MovieDetailPage'
-import Quizpage from './Quizpage.js'
+import Flashmain from './question/Flashmain.js'
 import MovieLayout from './Movieslayout'
 import Navbar from './dropdownmenu.js'
 
@@ -31,7 +31,7 @@ function App() {
             <MovieLayout />
           </Route>
           <Route path='/quizpage'>
-            <Quizpage />
+            <Flashmain/>
           </Route>
         </Switch>
         <Footer />

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import FlashcardList from "./FlashcardList";
+import "./Flashcard.scss";
 
 function Flashmain() {
   const [newQuestions, setNewQuestions] = useState([]);
@@ -34,13 +35,18 @@ function Flashmain() {
       });
   }, [cqi, newQuestions]);
   console.log(Object.values(newQuestions));
-  // console.log(newQuestions[0]);
+
   return (
-    <div>
+    <div className="flash-main">
       <FlashcardList currentQuestion={currentQuestion} />
-      <button className="nextbutton" onClick={() => setCQI(cqi + 1)}>
-        Next Question!
-      </button>
+      <div className="show-page">
+        <button className="previousbutton" onClick={() => setCQI(cqi - 1)}>
+          Previous Question!
+        </button>
+        <button className="nextbutton" onClick={() => setCQI(cqi + 1)}>
+          Next Question!
+        </button>
+      </div>
     </div>
   );
 }
