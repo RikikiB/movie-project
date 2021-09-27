@@ -7,10 +7,9 @@ function Home() {
       <div className='watch'>Don't know what to watch?</div>
       <div className='container'></div>
       <div>
-        <Link to='/'></Link>
-        <button className='btn5'>
+        <Link className='btn5' to='/quizpage'>
           <h1>START QUIZ!</h1>
-        </button>
+        </Link>
       </div>
     </>
   )
