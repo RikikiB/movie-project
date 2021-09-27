@@ -71,7 +71,7 @@
 /* .container {
   background-image: url('https://i.imgur.com/CaTD18H.jpg');
   min-height: 100vh;
-  width: 250vw;
+  width: 300vw;
   background-color: black;
 } */
 link {
@@ -86,7 +86,7 @@ link {
   line-height: 6vw;
   text-shadow: 0 0 3vw;
   opacity: 80%;
-  margin-left: 22%;
+  margin-left: 1%;
 }
 h1 {
   margin-left: 29%;
@@ -94,4 +94,15 @@ h1 {
 .right-align-background {
   background-image: url('https://i.imgur.com/');
   background-position: center right;
+}
+.Most {
+  position: absolute;
+  left: 50px;
+  top: 90%;
+  width: 300px;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(168, 14, 14, 0.767);
+  /* margin-right: 60%;
+  margin-bottom: 90%; */
 }

@@ -5,7 +5,8 @@ function MovieLayout() {
   // get movie list here or pass it in as a prop
   return (
     <>
-      <div className='Movielayout' />
+      <div className='Movieslayout' />
+      class
       <div className='Carousel'>
         <h1>ACTION</h1>
         <Carousel
