@@ -1,5 +1,4 @@
 .MovieDetailPage {
-  padding-bottom: 100px;
   width: 100%;
   display: grid;
   place-content: center;
@@ -12,20 +11,21 @@
   display: grid;
   grid-template-areas:
     'moviephoto details  .'
-    'moviephoto actor actor';
+    'moviephoto .    .'
+    '. actor .';
   background-color: rgb(29, 29, 29);
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
 }
 .MoviePhoto {
-  margin-top: 17px;
-  width: 185px;
-  height: 269px;
+  margin-top: 53px;
+  width: 200px;
+  height: 297px;
   background-color: rgb(233, 219, 219);
   overflow: hidden;
   grid-area: moviephoto;
 }
 .MoviePhoto img {
-  transform: translateY(-3%);
+  transform: translateY(-1%);
 }
 .detail {
   background-color: rgba(95, 93, 93, 0.475);
@@ -33,7 +33,6 @@
   color: white;
   display: grid;
   margin-top: 64px;
-
   grid-area: details;
 }
 .title {
@@ -45,11 +44,11 @@
 }
 
 .detail-text {
-  font-size: 13px;
+  font-size: 15px;
 }
 .overview {
   color: rgb(234, 240, 243);
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
 }
 .actors {
@@ -57,7 +56,6 @@
   align-items: center;
   flex-direction: column;
   grid-area: actor;
-  margin: 20px 10px;
 }
 .actor-view-btn {
   display: inline-block;
@@ -67,9 +65,11 @@
   align-items: center;
   cursor: pointer;
   border-radius: 8px;
-  font-size: 12px;
+  font-size: 18px;
   font-family: 'Crimson Text', serif;
-  margin-bottom: 20px;
+  background-color: rgba(121, 3, 3, 0.924);
+  color: white;
+  margin-top: 20px;
 }
 
 .actorPhoto {

@@ -1,18 +1,19 @@
 .Quizpage {
-  // height: 90%;
-  // width: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   display: Grid;
   grid-template-areas:
-    '. .'
-    'answers .'
+    'question'
+    'answers'
     'next next';
   align-self: center;
 }
 .Quizbox {
-  height: 400px;
-  width: 400px;
+  padding: 10px;
+  width: 100%;
+  background-color: rgb(29, 29, 29);
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
 }
 .Question {
   margin-top: 10px;

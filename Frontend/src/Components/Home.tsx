@@ -1,5 +1,5 @@
 import './Home.css'
-import Quizpage from './Quizpage.js'
+
 import { Link } from 'react-router-dom'
 
 function Home() {
