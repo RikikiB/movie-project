@@ -1,0 +1,47 @@
+.Quizpage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  display: Grid;
+  grid-template-areas:
+    'question'
+    'answers'
+    'next next';
+  align-self: center;
+}
+.Quizbox {
+  padding: 10px;
+  width: 100%;
+  background-color: rgb(29, 29, 29);
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+}
+.Question {
+  margin-top: 10px;
+  font-size: 40px;
+  text-shadow: 3px 3px 5px grey;
+  color: white;
+  font-family: 'Crimson Text', serif;
+  text-align: center;
+  grid-area: question;
+}
+.answer-list {
+  grid-area: answers;
+  display: Grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.answer {
+  font-family: 'Crimson Text', serif;
+  border-radius: 20px;
+  height: 50px;
+  width: 100px;
+  display: Grid;
+  justify-self: center;
+  align-items: center;
+}
+.nextbutton {
+  grid-area: next;
+  height: 50px;
+  width: 100px;
+}

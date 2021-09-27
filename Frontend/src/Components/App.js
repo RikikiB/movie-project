@@ -1,6 +1,6 @@
 import './App.css'
 import Footer from './Footer'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../main.css'
 import Home from './Home'
@@ -17,12 +17,6 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <Home />
-            <div>
-              <Link to='/'></Link>
-              <button className='btn5'>
-                <h1>START QUIZ!</h1>
-              </button>
-            </div>
           </Route>
           <Route path='/detail/:movieId'>
             <MovieDetailPage />

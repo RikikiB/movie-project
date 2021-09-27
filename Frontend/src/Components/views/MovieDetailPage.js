@@ -46,7 +46,7 @@ function MovieDetailPage(props) {
         <div className='MoviePhoto'>
           <div className='img-main'>
             <img
-              src={`${apiConfig?.images?.base_url}/w185/${movie?.poster_path}`}
+              src={`${apiConfig?.images?.base_url}/w200/${movie?.poster_path}`}
               alt={`${movie?.title} poster`}
             />
           </div>
@@ -62,7 +62,7 @@ function MovieDetailPage(props) {
             </div>
             <div className='detail-text'>Runtime: {movie.runtime} Minutes</div>
             <div className='detail-text'>
-              genres:
+              Genres:
               {movie.genres
                 .map(function (genre) {
                   return genre.name
