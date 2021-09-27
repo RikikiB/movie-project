@@ -1,5 +1,10 @@
 .App {
+  background-image: url('https://i.imgur.com/CaTD18H.jpg');
   max-width: 1920px;
+  height: 100vh;
   margin: 0 auto;
   font-family: 'Crimson Text', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
