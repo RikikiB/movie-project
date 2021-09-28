@@ -6,18 +6,20 @@ import Flashmain from "./Flashmain";
 function FlashcardList({ currentQuestion }) {
   const [checked, setChecked] = useState(false);
   return (
-    <div className="Mainbodycontainer">
+    <div className="questionairecontainer">
       <div className="questioncontainer">
         {currentQuestion ? <div>{currentQuestion.question}</div> : ""}
       </div>
       <div className="answercontainer">
         {currentQuestion?.answers?.map((a) => (
-          // <div>
           <div className='answers'>
-           <input type="checkbox" value={checked} /> <p className='showanswer'>{a}</p>
+       
+           <input className="answerinput" type="checkbox" value={checked}/> 
+      
+          
+           <p className='showanswer'>{a}</p>
             </div>
-          // </div>
-        ))}
+          ))}
       </div>
     </div>
   );

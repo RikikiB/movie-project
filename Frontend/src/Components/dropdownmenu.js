@@ -72,7 +72,7 @@ function Navbar() {
       </div>
 
       <label>
-        <input type='text' placeholder='Search..' name='search' />
+        <input className="nav-search" type='text' placeholder='Search..' name='search' />
         <FontAwesomeIcon icon={faSearchPlus} />
       </label>
     </div>
