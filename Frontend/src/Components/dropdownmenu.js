@@ -1,6 +1,5 @@
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-
 import './Home.tsx'
 import './Header.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -72,7 +71,12 @@ function Navbar() {
       </div>
 
       <label>
-        <input className="nav-search" type='text' placeholder='Search..' name='search' />
+        <input
+          className='nav-search'
+          type='text'
+          placeholder='Search..'
+          name='search'
+        />
         <FontAwesomeIcon icon={faSearchPlus} />
       </label>
     </div>

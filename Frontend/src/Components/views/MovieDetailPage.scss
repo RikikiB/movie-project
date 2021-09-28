@@ -75,7 +75,7 @@
 .actorPhoto {
   display: grid;
   grid-template-columns: 138px 138px 138px 138px;
-  // grid-template-rows: 1fr 1fr 1fr;
+
   grid-template-areas:
     '1 2 3 4'
     '5 6 7 8'
@@ -85,7 +85,7 @@
 }
 
 .actorPhoto img {
-  $scalingFactor: 2; // bigger numbers make smaller images
+  $scalingFactor: 2;
   width: calc(276px / $scalingFactor);
   height: calc(350px / $scalingFactor);
 }
