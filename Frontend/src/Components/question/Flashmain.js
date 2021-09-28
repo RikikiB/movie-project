@@ -3,47 +3,61 @@ import FlashcardList from "./FlashcardList";
 import "./Flashcard.scss";
 
 function Flashmain() {
-  const [newQuestions, setNewQuestions] = useState([]);
-  const [currentQuestion, setCurrentQuestion] = useState({});
-  //current question index below
-  const [cqi, setCQI] = useState(0);
+  const [questions, setQuestions] = useState([]);
+  // current question index below
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   useEffect(() => {
-    fetch("http://localhost:8000/getAnswerByQuestion", {
-      method: "Get",
-      header: { "content-type": "application/json" },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        const newarr = data.reduce((retval, el) => {
+    async function getAnswerByQuestion() {
+      try {
+        const result = await fetch(
+          "http://localhost:8000/getAnswerByQuestion",
+          {
+            method: "GET",
+            header: { "content-type": "application/json" },
+          }
+        );
+        const data = await result.json();
+        console.log({ data });
+        const questionsAndAnswers = data.reduce((retval, el) => {
           if (el.question in retval) {
-            retval[el.question].answers.push(el.answer);
+            retval[el.question].answers.push({
+              id: el.answerid,
+              answer: el.answer,
+            });
           } else {
             retval[el.question] = {
               question: el.question,
-              answers: [el.answer],
+              answers: [{ id: el.answerid, answer: el.answer }],
             };
           }
-
           return retval;
         }, {});
-        const newarr2 = Object.values(newarr);
-        setNewQuestions(newarr2);
-        setCurrentQuestion(newQuestions[cqi]);
-      })
-      .catch((error) => {
+        setQuestions(Object.values(questionsAndAnswers));
+      } catch (error) {
         console.log("Error:", error);
-      });
-  }, [cqi, newQuestions]);
-  console.log(Object.values(newQuestions));
+      }
+    }
+    getAnswerByQuestion();
+  }, []);
 
+  function nextQuestion() {
+    if (currentQuestionIndex <= questions.length - 1) {
+      setCurrentQuestionIndex((prev) => prev + 1);
+    }
+  }
+  function prevQuestion() {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex((prev) => prev - 1);
+    }
+  }
   return (
     <div className="flash-main">
-      <FlashcardList currentQuestion={currentQuestion} />
+      <FlashcardList currentQuestion={questions[currentQuestionIndex]} />
       <div className="show-page">
-        <button className="previousbutton" onClick={() => setCQI(cqi - 1)}>
+        <button className="previousbutton" onClick={prevQuestion}>
           Previous Question!
         </button>
-        <button className="nextbutton" onClick={() => setCQI(cqi + 1)}>
+        <button className="nextbutton" onClick={nextQuestion}>
           Next Question!
         </button>
       </div>

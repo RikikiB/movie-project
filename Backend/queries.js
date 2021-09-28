@@ -21,7 +21,7 @@ const getQuestions = (request, response) => {
 
 const getAnswerByQuestion = (request, response) => {
   pool.query(
-    `select q.question ,a.answer 
+    `select q.question ,a.answer ,a.id as answerid
     from answers as a
     join questions as q on a.question_id = q.ID`,
     (error, results) => {
