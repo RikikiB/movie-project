@@ -7,7 +7,7 @@ function Home() {
     <div className='homecontainer'>
       <div className='watch'>Don't know what to watch?</div>
       <Link to='/quizpage'>
-        <div className='startquiz'>START QUIZ!</div>
+        <button className='startquiz'>START QUIZ!</button>
       </Link>
     </div>
   )

@@ -19,6 +19,12 @@
   font-family: 'Crimson Text', serif;
   background-color: rgba(121, 3, 3, 0.924);
   color: white;
+  transition-duration: 0.4s;
+}
+
+.startquiz:hover {
+  background-color: white;
+  color: rgba(121, 3, 3, 0.924);
 }
 
 .watch {

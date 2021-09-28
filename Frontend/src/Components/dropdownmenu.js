@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 
 function Navbar() {
-  const [genre, setGenre] = useState({ genres: [] })
+  const [nowplaying, setNowplaying] = useState({ nowplaying: [] })
   const [rating, setRating] = useState({ results: [] })
   const [drop, setDrop] = useState(false)
   const [open, setOpen] = useState(false)
@@ -14,36 +14,44 @@ function Navbar() {
   const tmdb_api_key = '795cf19c05b9ff607f4b7206a0a4abd3'
 
   useEffect(() => {
-    const URL_api = `https://api.themoviedb.org/3/genre/movie/list?api_key=${tmdb_api_key}&language=en-US`
+    const URL_api = `https://api.themoviedb.org/3/movie/now_playing?api_key=${tmdb_api_key}&language=en-US&page=1&region=US`
     fetch(URL_api)
       .then((response) => response.json())
       .then((response) => {
-        setGenre(response)
+        setNowplaying(response)
       })
   }, [])
 
   useEffect(() => {
-    const URL_api = `https://api.themoviedb.org/3/movie/top_rated?api_key=${tmdb_api_key}&language=en-US&page=1`
+    const URL_api = `https://api.themoviedb.org/3/movie/top_rated?api_key=${tmdb_api_key}&language=en-US&page=1&region=us`
     fetch(URL_api)
       .then((response) => response.json())
       .then((response) => {
         setRating(response)
       })
   }, [])
-  console.log(rating)
+
   return (
     <div className='Navbar'>
       <Link to='/'>Home</Link>
       <Link to='/quizpage'> Movie Quiz</Link>
 
-      <div className='genresbox'>
-        <button className='genres' onClick={() => setDrop(!drop)}>
-          Genres
+      <div className='nowplayingbox'>
+        <button className='moviesnowplaying' onClick={() => setDrop(!drop)}>
+          Now Playing
         </button>
         {drop && (
           <div className='listholder'>
-            {genre.genres.map(function (genre) {
-              return <li key={genre.name}>{genre.name} </li>
+            {nowplaying.results.map(function (movie) {
+              return (
+                <Link
+                  key={movie.id}
+                  to={`/detail/${movie.id}`}
+                  onClick={() => setDrop(false)}
+                >
+                  {movie.title}
+                </Link>
+              )
             })}
           </div>
         )}
