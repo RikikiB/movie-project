@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Flashcard.scss";
+import Flashmain from "./Flashmain.js";
 
 function Answer({ answer, handleChange, selectedAnswer }) {
   const inputId = `${answer.answer}_${answer.id}`;
