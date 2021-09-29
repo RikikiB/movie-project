@@ -1,5 +1,8 @@
 const tmdb_api_key = '795cf19c05b9ff607f4b7206a0a4abd3'
 
+let genresToInclude = []
+let maxDuration = 100
+let minDuration = 65
 function getMovies(ratingOrPopular, callback) {
   let path = ratingOrPopular === 'popular' ? 'popular' : 'top_rated'
   function getUrl(page = 1) {
@@ -25,11 +28,17 @@ function getMovies(ratingOrPopular, callback) {
     callback(result)
   })
 }
-async function getMoviesByType(movieType = 'popular') {
+async function getMoviesByType(movieType = 'popular', opts) {
+  const { duration, genre } = opts
+  genresToInclude.push(genre)
+  maxDuration = duration + 100
+  minDuration = duration - 100
+
   // movieType can be "popular" or "top_rated"
   return new Promise((resolve) => {
     getMovies(movieType, async (results) => {
-      resolve(await filterByDuration(reduceMoviesToIds(results)))
+      const retval = await filterByDuration(reduceMoviesToIds(results))
+      resolve(retval)
     })
   })
 }
@@ -46,9 +55,6 @@ function reduceMoviesToIds(results) {
     }, [])
     .map((movie) => movie.id)
 }
-const genresToInclude = [9648, 53, 27]
-const maxDuration = 100
-const minDuration = 65
 
 function filterByDuration(movieIds) {
   return new Promise((resolve, reject) => {
@@ -79,7 +85,5 @@ function filterByDuration(movieIds) {
     })
   })
 }
-
-// getMoviesByType('popular').then(console.log)
 
 export { getMoviesByType }
