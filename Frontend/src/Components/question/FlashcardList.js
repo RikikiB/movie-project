@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react'
-import './Flashcard.scss'
+import { useState, useEffect } from "react";
+import "./Flashcard.scss";
 
 function Answer({ answer, handleChange, selectedAnswer }) {
-  const inputId = `${answer.answer}_${answer.id}`
+  const inputId = `${answer.answer}_${answer.id}`;
   return (
-    <div className='answer'>
+    <div className="answer">
       <label htmlFor={inputId}>
         <input
           id={inputId}
-          className='answerinput'
-          type='radio'
+          className="answerinput"
+          type="radio"
           checked={answer.id == selectedAnswer}
           value={answer.id}
           onChange={(e) => handleChange(e.target.value)}
@@ -17,49 +17,49 @@ function Answer({ answer, handleChange, selectedAnswer }) {
         {answer.answer}
       </label>
     </div>
-  )
+  );
 }
 
 function FlashcardList({ currentQuestion }) {
-  const [userAnswers, setUserAnswers] = useState([])
-  const [selectedAnswer, setSelectedAnswer] = useState('')
+  const [userAnswers, setUserAnswers] = useState([]);
+  const [selectedAnswer, setSelectedAnswer] = useState("");
   useEffect(() => {
     const previousAnswer = userAnswers?.find(
       (a) => a.questionId === currentQuestion.questionId
-    )
-    setSelectedAnswer(previousAnswer ? previousAnswer : selectedAnswer)
-  }, [currentQuestion, userAnswers, selectedAnswer])
-  if (!currentQuestion) return null
+    );
+    setSelectedAnswer(previousAnswer ? previousAnswer : selectedAnswer);
+  }, [currentQuestion, userAnswers, selectedAnswer]);
+  if (!currentQuestion) return null;
 
   return (
-    <div className='questionairecontainer'>
-      <div className='questioncontainer'>
+    <div className="questionairecontainer">
+      <div className="questioncontainer">
         <div>{currentQuestion.question}</div>
       </div>
-      <div className='answercontainer'>
+      <div className="answercontainer">
         {/* TODO: KEEP SELECTED ANSWER ACROSS RENDERS */}
         {currentQuestion?.answers?.map((answer) => (
           <Answer
             key={answer.id}
             answer={answer}
             handleChange={(answerId) => {
-              console.log(currentQuestion, answerId)
+              console.log(currentQuestion, answerId);
               // find the questionId
               const answerExists = Boolean(
                 userAnswers.find(
                   (ans) => ans.questionId === currentQuestion.questionId
                 )
-              )
+              );
               if (answerExists) {
                 setUserAnswers((prev) =>
                   prev.map((userAnswer) => {
                     if (userAnswer.questionId === currentQuestion.questionId) {
-                      return { ...userAnswer, answerId }
+                      return { ...userAnswer, answerId };
                     } else {
-                      return userAnswer
+                      return userAnswer;
                     }
                   })
-                )
+                );
               } else {
                 setUserAnswers([
                   ...userAnswers,
@@ -67,18 +67,18 @@ function FlashcardList({ currentQuestion }) {
                     questionId: currentQuestion.questionId,
                     answerId,
                   },
-                ])
+                ]);
               }
-              setSelectedAnswer(answerId)
+              setSelectedAnswer(answerId);
             }}
             selectedAnswer={selectedAnswer}
           />
         ))}
       </div>
-      <div style={{ color: 'white' }}>
+      <div style={{ color: "white" }}>
         {JSON.stringify(userAnswers, null, 2)}
       </div>
     </div>
-  )
+  );
 }
-export default FlashcardList
+export default FlashcardList;
