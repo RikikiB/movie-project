@@ -1,6 +1,5 @@
 .questionairecontainer {
   background-color: rgb(29, 29, 29);
-  // height:200px;
   padding: 2rem;
   width: 100%;
   display: flex;
@@ -9,15 +8,15 @@
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
 }
 .questioncontainer {
-  height: 70px;
+  height: 80px;
   width: 100%;
   display: flex;
   justify-content: center;
   color: white;
-  margin-top: 10px;
+  margin-bottom: 15px;
   font-size: 40px;
   text-shadow: 3px 3px 5px grey;
-  font-family: "Crimson Text", serif;
+  font-family: 'Crimson Text', serif;
 }
 .answercontainer {
   display: grid;
@@ -34,7 +33,7 @@
   padding: 1rem;
   background-color: rgba(121, 3, 3, 0.924);
   color: white;
-  font-family: "Crimson Text", serif;
+  font-family: 'Crimson Text', serif;
 }
 
 .answer-desc {
@@ -42,50 +41,48 @@
 }
 
 .show-page {
+  padding: 2rem;
   display: flex;
   justify-content: center;
-  background-color: rgba(121, 3, 3, 0.924);
-  height: 50px;
+  background-color: rgb(29, 29, 29);
+  height: 125px;
   width: 100%;
 }
 .nextbutton {
-  height: 35px;
-  width: 85px;
+  height: 60px;
+  width: 125px;
   border: none;
   text-align: center;
   cursor: pointer;
   border-radius: 8px;
-  font-size: 12px;
-  font-family: "Crimson Text", serif;
-  background-color: rgba(232, 107, 107, 0.924);
+  font-size: 18px;
+  font-family: 'Crimson Text', serif;
+  background-color: rgba(121, 3, 3, 0.924);
 
   box-shadow: 0 15px 16px 0 rgba(34, 32, 32, 0.2),
     0 10px 20px 0 rgba(46, 40, 40, 0.19);
   color: white;
   margin-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 1rem;
 }
 
 .previousbutton {
-  height: 35px;
-  width: 85px;
+  height: 60px;
+  width: 125px;
   border: none;
+
   text-align: center;
   cursor: pointer;
   border-radius: 8px;
-  font-size: 12px;
-  font-family: "Crimson Text", serif;
-  background-color: rgba(232, 107, 107, 0.924);
+  font-size: 18px;
+  font-family: 'Crimson Text', serif;
+  background-color: rgba(121, 3, 3, 0.924);
   color: white;
   box-shadow: 0 15px 16px 0 rgba(34, 32, 32, 0.2),
     0 10px 20px 0 rgba(46, 40, 40, 0.19);
-  margin-top: 10px;
-  margin-bottom: 1rem;
 }
 
 .answerinput {
-  margin: 0;
+  // margin: 0;
   // margin-right: 1px;
 }
 
