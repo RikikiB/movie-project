@@ -1,0 +1,95 @@
+.questionairecontainer {
+  background-color: rgb(29, 29, 29);
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+}
+.questioncontainer {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-bottom: 15px;
+  font-size: 40px;
+  text-shadow: 3px 3px 5px grey;
+  font-family: "Crimson Text", serif;
+}
+.answercontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+.answers {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(121, 3, 3, 0.924);
+  color: white;
+  font-family: "Crimson Text", serif;
+}
+
+.answer-desc {
+  margin: 0;
+}
+
+.show-page {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(29, 29, 29);
+  height: 125px;
+  width: 100%;
+}
+.nextbutton {
+  height: 60px;
+  width: 125px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 18px;
+  font-family: "Crimson Text", serif;
+  background-color: rgba(121, 3, 3, 0.924);
+
+  box-shadow: 0 15px 16px 0 rgba(34, 32, 32, 0.2),
+    0 10px 20px 0 rgba(46, 40, 40, 0.19);
+  color: white;
+  margin-left: 10px;
+}
+
+.previousbutton {
+  height: 60px;
+  width: 125px;
+  border: none;
+
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 18px;
+  font-family: "Crimson Text", serif;
+  background-color: rgba(121, 3, 3, 0.924);
+  color: white;
+  box-shadow: 0 15px 16px 0 rgba(34, 32, 32, 0.2),
+    0 10px 20px 0 rgba(46, 40, 40, 0.19);
+}
+
+.showanswer {
+  margin-left: 5px;
+  margin: 0;
+}
+.questionairecontainer {
+  .answer {
+    label {
+      color: white;
+      cursor: pointer;
+    }
+  }
+}

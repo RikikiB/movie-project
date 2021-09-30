@@ -1,7 +1,6 @@
 import './Movieslayout.scss'
 import Cardstyle from './Cardstyle'
 import { useEffect, useState } from 'react'
-import BootstrapCard from 'react-bootstrap/Card'
 import { Link } from 'react-router-dom'
 
 function MovieLayout(props) {
