@@ -56,11 +56,15 @@ function MovieDetailPage(props) {
           <div className='overview'>{movie.overview}</div>
 
           <div className='detail'>
-            <div className='detail-text'>Title: {movie.original_title}</div>
+            <div className='detail-text'>
+              Title: {movie.original_title}
+            </div>
             <div className='detail-text'>
               Release Date: {movie.release_date}
             </div>
-            <div className='detail-text'>Runtime: {movie.runtime} Minutes</div>
+            <div className='detail-text'>
+              Runtime: {movie.runtime} Minutes
+            </div>
             <div className='detail-text'>
               Genres:
               {movie.genres
@@ -72,7 +76,10 @@ function MovieDetailPage(props) {
           </div>
         </div>
         <div className='actors'>
-          <button className='actor-view-btn' onClick={() => setShow(!show)}>
+          <button
+            className='actor-view-btn'
+            onClick={() => setShow(!show)}
+          >
             Actor view
           </button>
           <div className={show ? '' : 'hidden'}>
@@ -101,4 +108,3 @@ function MovieDetailPage(props) {
 }
 
 export default MovieDetailPage
-export { useEffect }

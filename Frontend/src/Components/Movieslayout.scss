@@ -1,7 +1,30 @@
-.Carousel {
-  border: 15px solid rgba(81, 81, 81, 1);
-  padding: 50px;
-  background-color: rgba(81, 81, 81, 1);
+.Cards::-webkit-scrollbar {
+  display: none;
+}
+
+.Cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  padding: 20px;
+  // flex-grow: 0;
+  width: 240vw;
+  border: black solid;
+}
+.Cards2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  padding: 20px;
+  // flex-grow: 0;
+  width: 240vw;
+  border: black solid;
+}
+
+.cardsWrapper {
+  // overflow-x: hidden scroll auto initial inherit;
   width: 100%;
-  height: 100%;
+  overflow: scroll;
 }

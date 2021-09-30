@@ -1,70 +1,64 @@
 import './Movieslayout.scss'
-import Carousel from './Carousel'
+import Cardstyle from './Cardstyle'
+import { useEffect, useState } from 'react'
+import BootstrapCard from 'react-bootstrap/Card'
+import { Link } from 'react-router-dom'
 
-function MovieLayout() {
+function MovieLayout(props) {
+  const [movies, setMovies] = useState([])
+  const [shows, setShows] = useState([])
+  // const [images, setImages] = useState({ images: [] })
+  const [open, setOpen] = useState([false])
+  const tmdb_api_key = '795cf19c05b9ff607f4b7206a0a4abd3'
+
+  // async function getRecommendations(movieId) {
+  //   const URL_api = `https://api.themoviedb.org/3/movie/top_rated?api_key=${tmdb_api_key}&language=en-US&page=1`
+  //   const response = await fetch(URL_api)
+  //   return await response.json()
+  // }
+
+  useEffect(() => {
+    const URL_api = `https://api.themoviedb.org/3/movie/now_playing?api_key=${tmdb_api_key}&language=en-US&page1`
+    fetch(URL_api)
+      .then((response) => response.json())
+      .then((response) => {
+        setMovies(response.results)
+      })
+  }, [])
+
+  useEffect(() => {
+    const URL_api = `
+    https://api.themoviedb.org/3/tv/popular?api_key=${tmdb_api_key}&language=en-US&page=1`
+    fetch(URL_api)
+      .then((response) => response.json())
+      .then((response) => {
+        setShows(response.results)
+      })
+  }, [])
+
   // get movie list here or pass it in as a prop
+  console.log(movies)
+  console.log(shows)
   return (
-    <>
-      <div className='Movieslayout' />
-      class
-      <div className='Carousel'>
-        <h1>ACTION</h1>
-        <Carousel
-          interval={5000}
-          indicators={false}
-          slides={[
-            {
-              src: 'https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_FMjpg_UX1000_.jpg',
-              altText: 'First Slide',
-              movieId: 'asdfasdf',
-            },
-            {
-              src: 'https://terrigen-cdn-dev.marvel.com/content/prod/1x/avengersendgame_lob_crd_05.jpg',
-              altText: 'second Slide',
-              movieId: 'asdfasdsfghf',
-            },
-            {
-              src: 'https://lumiere-a.akamaihd.net/v1/images/20cs_xmen_dark_phoenix_poster-keyart_2de4ace2.jpeg?region=0%2C0%2C1400%2C2100',
-              altText: 'third Slide',
-              movieId: 'asdfasdfasdf',
-            },
-            {
-              src: 'https://upload.wikimedia.org/wikipedia/en/f/f9/Spider-Man_Homecoming_poster.jpg',
-              altText: 'fourth Slide',
-              movieId: 'asdfasdfasdfe',
-            },
-          ]}
-        />
-        <h1>ROMANCE</h1>
-        <Carousel
-          interval={4000}
-          indicators={false}
-          slides={[
-            {
-              src: 'https://upload.wikimedia.org/wikipedia/en/0/00/Dirty_Dancing.jpg',
-              altText: 'First Slide',
-              movieId: 'asdfasdf',
-            },
-            {
-              src: 'https://m.media-amazon.com/images/M/MV5BMTk3OTM5Njg5M15BMl5BanBnXkFtZTYwMzA0ODI3._V1_.jpg',
-              altText: 'second Slide',
-              movieId: 'asdfasdsfghf',
-            },
-            {
-              src: 'https://m.media-amazon.com/images/M/MV5BMzU3NTYxM2MtNjViMS00YmNlLWEwM2MtYWI2MzgzNTkxODFjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg',
-              altText: 'third Slide',
-              movieId: 'asdfasdfasdf',
-            },
-            {
-              src: 'https://m.media-amazon.com/images/I/51iJbYR78qL._AC_.jpg',
-              altText: 'fourth Slide',
-              movieId: 'asdfasdfasdfe',
-            },
-          ]}
-        />
+    <div>
+      <div className='Movieslayout'></div>
+      <div className='cardsWrapper'>
+        <div className='Cards' onClick={() => setOpen(!open)}>
+          {movies?.map((movie) => (
+            <Link to={`/detail/${movie.id}`}>
+              <Cardstyle key={movie.id} movie={movie} />
+            </Link>
+          ))}
+        </div>
+        <div className='Cards2'>
+          {shows?.map((show) => (
+            <Link to={`/detail/${show.id}`}>
+              <Cardstyle key={show.id} show={show} />
+            </Link>
+          ))}
+        </div>
       </div>
-    </>
+    </div>
   )
 }
-
 export default MovieLayout

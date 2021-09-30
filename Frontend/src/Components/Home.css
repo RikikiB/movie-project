@@ -22,7 +22,6 @@
   margin: 0;
   position: absolute;
   top: 50%;
-  text-align: center;
   margin-left: 35%;
 }
 .btn5 {
@@ -34,15 +33,17 @@
   0%,
   100% {
     text-shadow: 0 0 1vw rgba(168, 14, 14, 0.767),
-      0 0 1vw rgba(168, 14, 14, 0.767), 0 0 5vw rgba(168, 14, 14, 0.767),
-      0 0 5vw rgba(168, 14, 14, 0.767), 0 0 0.3vw rgba(168, 14, 14, 0.767),
-      0.3vw 0.3vw 0.1vw #ff0130;
+      0 0 1vw rgba(168, 14, 14, 0.767),
+      0 0 5vw rgba(168, 14, 14, 0.767),
+      0 0 5vw rgba(168, 14, 14, 0.767),
+      0 0 0.3vw rgba(168, 14, 14, 0.767), 0.3vw 0.3vw 0.1vw #ff0130;
     color: rgb(255, 255, 255);
   }
   50% {
-    text-shadow: 0 0 0.3vw rgb(255, 255, 255), 0 0 1.4vw rgb(255, 255, 255),
-      0 0 3vw rgb(255, 255, 255), 0 0 4vw rgb(255, 255, 255),
-      0 0 0.2vw rgb(255, 255, 255), 0.5vw 0.5vw 0.1vw rgb(255, 255, 255);
+    text-shadow: 0 0 0.3vw rgb(255, 255, 255),
+      0 0 1.4vw rgb(255, 255, 255), 0 0 3vw rgb(255, 255, 255),
+      0 0 4vw rgb(255, 255, 255), 0 0 0.2vw rgb(255, 255, 255),
+      0.5vw 0.5vw 0.1vw rgb(255, 255, 255);
     color: rgba(168, 14, 14, 0.767);
   }
 }
@@ -55,16 +56,18 @@
 @keyframes flux {
   0%,
   100% {
-    text-shadow: 0 0 2vw rgb(255, 255, 255), 0 0 4vw rgb(255, 255, 255),
-      0 0 10vw rgb(255, 255, 255), 0 0 10vw rgb(255, 255, 255),
-      0 0 0.4vw rgb(255, 255, 255), 0.5vw 0.5vw 0.1vw rgb(255, 255, 255);
+    text-shadow: 0 0 2vw rgb(255, 255, 255),
+      0 0 4vw rgb(255, 255, 255), 0 0 10vw rgb(255, 255, 255),
+      0 0 10vw rgb(255, 255, 255), 0 0 0.4vw rgb(255, 255, 255),
+      0.5vw 0.5vw 0.1vw rgb(255, 255, 255);
     color: rgba(168, 14, 14, 0.767);
   }
   50% {
     text-shadow: 0 0 0.3vw rgba(168, 14, 14, 0.767),
-      0 0 1.3vw rgba(168, 14, 14, 0.767), 0 0 3vw rgba(168, 14, 14, 0.767),
-      0 0 3vw rgba(168, 14, 14, 0.767), 0 0 0.2vw rgba(168, 14, 14, 0.767),
-      0.5vw 0.5vw 0.1vw #ff0130;
+      0 0 1.3vw rgba(168, 14, 14, 0.767),
+      0 0 3vw rgba(168, 14, 14, 0.767),
+      0 0 3vw rgba(168, 14, 14, 0.767),
+      0 0 0.2vw rgba(168, 14, 14, 0.767), 0.5vw 0.5vw 0.1vw #ff0130;
     color: rgb(255, 255, 255);
   }
 }
@@ -83,10 +86,14 @@ link {
   font-family: neon;
   color: #fb4264;
   font-size: 5vw;
-  line-height: 6vw;
+  line-height: 200px;
   text-shadow: 0 0 3vw;
   opacity: 80%;
-  margin-left: 1%;
+  text-align: center;
+  top: 40%;
+  width: 100%;
+  position: absolute;
+  margin-top: -100px;
 }
 h1 {
   margin-left: 29%;
@@ -94,15 +101,5 @@ h1 {
 .right-align-background {
   background-image: url('https://i.imgur.com/');
   background-position: center right;
-}
-.Most {
-  position: absolute;
-  left: 50px;
-  top: 90%;
-  width: 300px;
-  padding: 10px;
-  color: rgb(255, 255, 255);
-  background-color: rgba(168, 14, 14, 0.767);
-  /* margin-right: 60%;
-  margin-bottom: 90%; */
+  
 }
