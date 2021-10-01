@@ -2,7 +2,9 @@
   height: 50px;
   width: 100%;
   background-color: rgba(121, 3, 3, 0.924);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'Crimson Text', serif;
-
   color: white;
 }

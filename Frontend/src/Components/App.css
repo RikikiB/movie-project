@@ -1,6 +1,8 @@
 .App {
   background-color: rgba(95, 93, 93, 0.475);
-  background-image: url('https://i.imgur.com/CaTD18H.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('https://i.imgur.com/CaTD18H.jpg');
+
   height: 100vh;
   margin: 0 auto;
   font-family: 'Crimson Text', serif;
