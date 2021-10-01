@@ -29,19 +29,17 @@
 
 .watch {
   color: #ffffff00;
+  color: lime;
   font-size: 5vw;
   text-shadow: 0 0 3vw;
-  opacity: 80%;
   text-align: center;
   font-family: 'Crimson Text', serif;
-}
-
-.watch {
   animation: flux 5s linear infinite;
   -moz-animation: flux 4s linear infinite;
   -webkit-animation: flux 4s linear infinite;
   -o-animation: flux 4s linear infinite;
 }
+
 @keyframes flux {
   0%,
   25% {
